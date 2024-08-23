@@ -22,7 +22,72 @@
     <main>
         <h1>About Us</h1>
         <p>This is the about page of the website.</p>
+
+        <!-- Certificate Form -->
+        <form id="certificateForm">
+            <label for="certificate_name">Certificate Name:</label>
+            <input type="text" id="certificate_name" name="certificate_name" required><br>
+
+            <label for="duration">Duration:</label>
+            <input type="text" id="duration" name="duration"><br>
+
+            <label for="image_url">Image URL:</label>
+            <input type="text" id="image_url" name="image_url"><br>
+
+            <label for="link">Certificate Link:</label>
+            <input type="text" id="link" name="link"><br>
+
+            <label for="details">Details:</label>
+            <textarea id="details" name="details" rows="4"></textarea><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Display Submitted Certificates -->
+        <center>
+        <div id="certificates" class="box">
+            <h2>Submitted Certificates</h2>
+            <!-- Certificates will be displayed here -->
+        </div>
+        </center>
     </main>
+
+    <script>
+        document.getElementById('certificateForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+
+            // Retrieve form values
+            const certificateName = document.getElementById('certificate_name').value;
+            const duration = document.getElementById('duration').value;
+            const imageUrl = document.getElementById('image_url').value;
+            const link = document.getElementById('link').value;
+            const details = document.getElementById('details').value;
+
+            // Create a certificate display
+            let certificateEntry = `<div class="sub-box"><h3>${certificateName}</h3>`;
+
+            if (duration) {
+                certificateEntry += `<p><strong>Duration:</strong> ${duration}</p>`;
+            }
+            if (details) {
+                certificateEntry += `<p><strong>Details:</strong> ${details}</p>`;
+            }
+            if (link) {
+                certificateEntry += `<p><strong>Link:</strong> <a href="${link}" target="_blank">Click here</a></p>`;
+            }
+            if (imageUrl) {
+                certificateEntry += `<img src="${imageUrl}" alt="${certificateName} Image" width="200">`;
+            }
+
+            certificateEntry += `</div><hr>`;
+
+            // Append the certificate entry to the certificates div
+            const certificatesDiv = document.getElementById('certificates');
+            certificatesDiv.innerHTML += certificateEntry;
+
+            // Optionally, clear the form after submission
+            document.getElementById('certificateForm').reset();
+        });
+    </script>
 </body>
 </html>
-

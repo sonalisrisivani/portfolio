@@ -4,76 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Page</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-color: #333;
-            color: white;
-            padding: 10px 0;
-        }
-
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-        }
-
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
-
-        main {
-            padding: 20px;
-        }
-
-        .form-container {
-            max-width: 600px;
-            margin: auto;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        form input, form textarea, form button {
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        form button {
-            background-color: #333;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        form button:hover {
-            background-color: #555;
-        }
-
-        .results {
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -93,19 +24,27 @@
         <div class="form-container">
             <form id="contactForm">
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" required><br>
 
-                <label for="email">Link:</label>
-                <input type="link" id="link" name="link" required>
+                <label for="link">Link:</label>
+                <input type="link" id="link" name="link" required><br>
 
                 <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
 
                 <button type="submit">Submit</button>
             </form>
+        </div>
 
-            <div class="results" id="results"></div>
-            </div>
+
+            <center>
+            <div class="box" id="results">
+              <h2>Submitted Data</h2><br>
+            </div> 
+            </center>
+             
+            
+            
     </main>
 
     <script>
@@ -119,11 +58,12 @@
 
             // Create a results message
             const resultsDiv = document.getElementById('results');
-            resultsDiv.innerHTML = `
-                <h2>Submitted Data</h2>
+            resultsDiv.innerHTML += `
+                <div class="sub-box">
                 <p><strong>Platform:</strong> ${name}</p>
                 <p><strong>Link:</strong> <a href="${link}">CLick here </a></p>
                 <p><strong>Message:</strong> ${message}</p>
+                </div>
             `;
         });
     </script>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project</title>
+    <title>Projects Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,9 +20,66 @@
         </nav>
     </header>
     <main>
-        <h1>Welcome to the Project Page</h1>
-       
+        <h1>Projects</h1>
+
+        <!-- Project Form -->
+        <form id="projectForm">
+            <label for="project_name">Project Name:</label>
+            <input type="text" id="project_name" name="project_name" required><br>
+
+            <label for="duration">Duration:</label>
+            <input type="text" id="duration" name="duration"><br>
+
+            <label for="technologies_used">Technologies Used:</label>
+            <input type="text" id="technologies_used" name="technologies_used"><br>
+
+            <label for="details">Details:</label>
+            <textarea id="details" name="details" rows="4"></textarea><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <!-- Display Submitted Projects -->
+        <center>
+        <div id="projects" class="box">
+            <h2>Submitted Projects</h2>
+            <!-- Projects will be displayed here -->
+        </div>
+        </center>
     </main>
+
+    <script>
+        document.getElementById('projectForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+
+            // Retrieve form values
+            const projectName = document.getElementById('project_name').value;
+            const duration = document.getElementById('duration').value;
+            const technologiesUsed = document.getElementById('technologies_used').value;
+            const details = document.getElementById('details').value;
+
+            // Create a project display
+            let projectEntry = `<div class="sub-box"><h3>${projectName}</h3>`;
+
+            if (duration) {
+                projectEntry += `<p><strong>Duration:</strong> ${duration}</p>`;
+            }
+            if (technologiesUsed) {
+                projectEntry += `<p><strong>Technologies Used:</strong> ${technologiesUsed}</p>`;
+            }
+            if (details) {
+                projectEntry += `<p><strong>Details:</strong> ${details}</p>`;
+            }
+
+            projectEntry += `</div><hr>`;
+
+            // Append the project entry to the projects div
+            const projectsDiv = document.getElementById('projects');
+            projectsDiv.innerHTML += projectEntry;
+
+            // Optionally, clear the form after submission
+            document.getElementById('projectForm').reset();
+        });
+    </script>
 </body>
 </html>
-

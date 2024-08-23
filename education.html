@@ -22,10 +22,68 @@
     <main>
         <h1>Welcome to the Education Page</h1>
         <form id="education">
-          <label for="type">Enter Education Type </label>
-          <input type="text"> 
+            <label for="type">Enter Education Type</label>
+            <input type="text" id="type" name="type"><br>
+
+            <label for="time">Enter Duration</label>
+            <input type="text" id="time" name="time"><br>
+
+            <label for="name">Enter Educational institute name</label>
+            <input type="text" id="name" name="name"><br>
+
+            <label for="branch">Enter Branch or stream</label>
+            <input type="text" id="branch" name="branch"><br>
+
+            <label for="address">Enter address</label>
+            <input type="text" id="address" name="address"><br>
+
+            <label for="score">Enter score</label>
+            <input type="text" id="score" name="score"><br>
+
+            <label for="achievement">Enter Achievements if any</label>
+            <textarea id="achievement" name="achievement" rows="4"></textarea><br>
+
+            <label for="link">Enter any links</label>
+            <input type="link" id="link" name="link"><br>
+
+            <button type="submit">Submit</button>
         </form>
     </main>
+
+    <center>
+    <div class=" box" id="results">
+     <h2>Submitted data</h2>
+    </div>
+    </center>
+
+    <script>
+        document.getElementById('education').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+
+            // Retrieve form values
+            const type = document.getElementById('type').value;
+            const time = document.getElementById('time').value;
+            const name = document.getElementById('name').value;
+            const branch = document.getElementById('branch').value;
+            const address = document.getElementById('address').value;
+            const score = document.getElementById('score').value;
+            const achievement = document.getElementById('achievement').value;
+            const link = document.getElementById('link').value;
+
+            // Create a results message
+            const resultsDiv = document.getElementById('results');
+            resultsDiv.innerHTML = `
+
+                <p><strong>Name:</strong> ${name}</p>
+                <p><strong>Type:</strong> ${type}</p>
+                <p><strong>Time:</strong> ${time}</p>
+                <p><strong>Branch:</strong> ${branch}</p>
+                <p><strong>Address:</strong> ${address}</p>
+                <p><strong>Score:</strong> ${score}</p>
+                <p><strong>Achievement:</strong> ${achievement}</p>
+                <p><strong>Link:</strong> <a href="${link}" target="_blank">Click here</a></p>
+            `;
+        });
+    </script>
 </body>
 </html>
-

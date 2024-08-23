@@ -1,14 +1,16 @@
+/* Basic body styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
+/* Header and navigation styling */
 header {
     background-color: #333;
     color: white;
     padding: 10px 0;
-    margin: 0; 
+    width: 100%;
 }
 
 nav ul {
@@ -16,23 +18,60 @@ nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center the menu items */
+    gap: 10px; /* Adjust the gap between menu items */
 }
 
 nav ul li {
-    margin: 0 15px;
+    margin: 0;
 }
 
 nav ul li a {
     color: white;
     text-decoration: none;
+    font-size: 14px;
+    padding: 0 10px; /* Reduce padding to bring items closer */
 }
 
 nav ul li a:hover {
     text-decoration: underline;
 }
 
+/* Main content styling */
 main {
     padding: 20px;
 }
 
+/* Styles for dynamically added project boxes */
+.sub-box{
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.sub-box h3 {
+    margin-top: 0;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Expand and highlight box on click */
+.sub-box:active {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.box
+{
+ padding: 10px;
+ width: 500px;
+ border: 3px solid black;
+ border-radius: 7px;
+ 
+}
