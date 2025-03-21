@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Timeline with ScrollReveal</title>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+           background: radial-gradient(ellipse, pink 10%, white 100%);  /*Optional: Set a background color */
+
+
+            padding: 50px;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 2px;
+            margin: 10px 0;
+            background: light-pink ;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-dot {
+            position: absolute;
+            left: -15px;
+            top: 50%;
+            width: 15px;
+            height: 15px;
+            background: pink;
+            border-radius: 50%;
+            transform: translateY(-50%);
+        }
+
+        .timeline-content {
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>2019</h3>
+                <p> Completed High School (SSC) at DAV PUBLIC School, CGPA 9.8.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>2020</h3>
+                <p>Built and Hosted 1st Website using Wordpress.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>2021</h3>
+                <p>Completed Intermediate (MPC) at Sri Chaitanya, 93.1%</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>2021</h3>
+                <p>Received NCC B Certificate with "A" Grade.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>2022</h3>
+                <p>Memory Card Game – Created a JavaScript-based interactive memory game.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>2022</h3>
+                <p>PDF Merger Tool – Built a drag-and-drop tool for merging PDFs.</p>
+            </div>
+        </div>
+
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>2023</h3>
+                <p>Job Searching Web Portal – Integrated Adzuna API to fetch real-time job listings with search filters.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>2023</h3>
+                <p>Full Stack Project: Airline Management System – Developed a flight booking system in a group of 5 ,using Flask and MongoDB, improving efficiency by 40%.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>2024</h3>
+                <p>Restaurant Listing & Searching – Developed a Node.js-based API with filtering and pagination features.</p>
+            </div>
+        </div>
+
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>2024</h3>
+                <p>Firebase User Authentication System – Implemented secure sign-in and sign-up using Firebase.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>2024</h3>
+                <p>Designed personal Food blog using firebase and hosted in firebase.</p>
+            </div>
+        </div>
+
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>2025</h3>
+                <p>Plant Disease Detection (Final Year Project)-Developed a Flask-based CNN model to detect diseases in cotton plants using Python, TensorFlow, Keras, Flask, HTML, CSS, JavaScript.</p>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        ScrollReveal().reveal('.timeline-item', {
+            duration: 1000,
+            origin: 'bottom',
+            distance: '50px',
+            easing: 'ease-in-out',
+            delay: 300,
+            interval: 200,
+	reset: true
+        });
+    </script>
+
+</body>
+</html>

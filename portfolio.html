@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Model Viewer</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+ <style>
+
+@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
+@import url(https://fonts.googleapis.com/css?family=Bungee);
+
+    body {
+      margin: 10px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column; /* Stack elements vertically */
+      justify-content: center;
+      align-items: center;
+      
+      
+      background: radial-gradient(ellipse, pink 10%, white 100%);  /*Optional: Set a background color */
+      /*overflow: hidden;*/
+    }
+
+
+
+    /* Position the text at the top */
+    .text-mask {
+      position: absolute;
+      top: 20px; /* You can adjust this as needed */
+      left: 50%;
+      transform: translateX(-50%);
+      font-family: 'Amatic SC',cursive;
+      font-size: 4rem; /* Adjust text size */
+      font-weight: bold;
+      color: transparent;
+      background-image: url("resources/text-background.gif"); /* Add background image */
+      background-size: cover;
+      background-clip: text; /* Make the background clip to the text */
+      text-align: center;
+    }
+
+
+    .txt {
+      margin: 20px;
+      padding: 20px;
+      color: black;
+      font-size: 30px;
+	font-family: 'Amatic SC',cursive;
+      text-align: left;
+      /*background: rgba(0, 0, 0, 0.7);*/
+      border-radius: 10px;
+      max-width: 100%;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+
+
+
+
+
+/* This is for cursor typing effect*/
+.typing-effect {
+  font-size: 50px;
+  font-family: 'Bungee',cursive;
+  white-space: normal;
+  overflow: hidden;
+  border-right: 3px solid white; /* Creates the cursor effect */
+  height: 150px;
+  width: 100%;
+  display: inline;
+  animation: blink 0.75s step-end infinite;
+} 
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.type-height{
+
+height: 160px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for projects section */
+.horizontal-scroll-wrapper {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px 0;
+  width: 100%;
+  max-height: $finalHeight;
+  gap: 10px;
+  scroll-behavior: smooth;
+}
+
+.horizontal-scroll-wrapper > div {
+  flex-shrink: 0;
+  width: 260px;   /* Set width to 60px */
+  height: 270px;  /* Set height to 70px */
+  background: #cab;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.horizontal-scroll-wrapper > div:hover,
+.horizontal-scroll-wrapper > div:focus {
+  transform: scale(1.1);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  outline: none;
+}
+
+
+
+  </style>
+
+</head>
+<body>
+ 
+
+
+
+ 
+
+
+<div class="txt"> <!-- this is to align all elements within it to left side of html body-->
+
+<div class="txt">
+
+Sonali Sri Sivani - <br> 
+<div class="type-height">
+<div class="typing-effect" id="typing-text"></div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+<div class="txt">
+<b>About Me:</b>
+<br>
+Final Year Stud in BTech(CS) <br>
+I like to give life to my thoughts by Art and Coding
+<br> and <br>
+Love watching anime (r u also a tpn fan?)
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="txt">
+<b>Motto:</b>
+A passionate developer who sees skills as a means to help others. My goal is to create meaningful tools and resources that positively impact lives, often as an unseen but valuable presence in people's everyday routines.
+</div>
+
+
+
+
+
+
+
+<!--
+<div class="txt">
+<b>Fun Fact(The Origin):</b>
+At the age of 16 , Started building websites (using WordPress during covid-19 ) cos i found it cool and then fell in love with its process and product. 
+</div>
+-->
+
+
+
+
+
+
+
+
+
+
+<div class="txt">
+<b>My Skills:</b><br>
+<table>
+  <tr>
+    <td><b>Programming Languages</b></td>
+    <td>Java | C Programming | Python</td>
+  </tr>
+  <tr>
+    <td><b>Web Development</b></td>
+    <td>HTML | CSS | JavaScript | 3JS | React JS | Node.js | Flask | PHP | GVC</td>
+  </tr>
+  <tr>
+    <td><b>Database</b></td>
+    <td>MySQL | MongoDB | Firestore | Firebase Realtime Database</td>
+  </tr>
+  <tr>
+    <td><b>Cloud</b></td>
+    <td>Firebase | Azure</td>
+  </tr>
+  <tr>
+    <td><b>Design</b></td>
+    <td>Figma | Canva | WordPress | MS Word | Dora AI</td>
+  </tr>
+  <tr>
+    <td><b>Data Visualization</b></td>
+    <td>Looker Studio | Power BI | MS Excel</td>
+  </tr>
+  <tr>
+    <td><b>Other Tools</b></td>
+    <td>GitHub | Visual Studio Code</td>
+  </tr>
+  <tr>
+    <td><b>Operating Systems</b></td>
+    <td>Windows | Kali Linux | Linux</td>
+  </tr>
+</table>
+</div>
+
+
+
+
+
+
+
+<!--
+
+
+<div class="txt">
+<iframe src="timeline.html" width="100%" height="600px" style="border: none;"></iframe>
+</div>
+
+</div>
+
+
+
+-->
+
+
+
+
+
+
+
+
+
+<div class="txt">
+<iframe src="timeline.html" width="100%" height="1550px" style="border: none; border-radius: 10px;"></iframe>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="txt"> <!-- this is to align all elements within it to left side of html body-->
+
+
+
+
+
+
+
+
+
+
+<!--
+
+
+<div class="txt">
+<h3>💖 Some of my Projects<h3>
+<div class="horizontal-scroll-wrapper">
+  <div >Item 1</div>
+  <div >Item 2</div>
+  <div >Item 3</div>
+  <div >Item 4</div>
+  <div >Item 5</div>
+  <div >Item 6</div>
+  <div >Item 1</div>
+  <div >Item 2</div>
+  <div >Item 3</div>
+  <div >Item 4</div>
+  <div >Item 5</div>
+  <div >Item 6</div>
+  <div >Item 3</div>
+  <div >Item 4</div>
+  <div >Item 5</div>
+  <div >Item 6</div>
+  <div >Item 1</div>
+  <div >Item 2</div>
+  <div >Item 3</div>
+  <div >Item 4</div>
+  <div >Item 5</div>
+  <div >Item 6</div>
+
+</div>
+
+</div>
+
+
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+<div class="txt">
+<h3>💖 Support My Projects<h3>
+If you like my work and want to support me, consider sponsoring me! Your support helps me to keep creating and maintaining amazing projects.  
+
+<div align="center">
+  <a href="https://github.com/sponsors/sonalisrisivani/dashboard">
+    <img src="https://img.shields.io/badge/Sponsor%20Me-✨-blueviolet?style=for-the-badge&logo=github-sponsors" alt="Sponsor Me">
+  </a>
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="txt">
+<h3>🔗 Connect with me:</h3>
+
+<p>
+  <a href="https://mail.google.com/mail/?view=cm&to=sonalisrisivani@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Gmail-sonalisrisivani@gmail.com-red?style=for-the-badge&logo=gmail" alt="Gmail Badge">
+  </a>
+  <a href="https://www.linkedin.com/in/gsss/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-Connect%20with%20me-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn Badge">
+  </a>
+  <a href="https://github.com/sonalisrisivani" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-Sonali_21-black?style=for-the-badge&logo=github" alt="GitHub Badge">
+  </a>
+
+</p>
+
+
+
+</div>
+
+
+
+</div>
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+   
+
+
+
+
+const words = ["A Frontend Developer", "A Backend Developer", "A Full Stack Developer", "A Product Designer"];
+let i = 0;
+let currentWord = 0;
+const typingTextElement = document.getElementById('typing-text');
+
+function typeWord() {
+  if (i < words[currentWord].length) {
+    typingTextElement.innerHTML += words[currentWord].charAt(i);
+    i++;
+    setTimeout(typeWord, 100); // Adjust the typing speed here
+  } else {
+    setTimeout(() => {
+      clearText(); // Clear the text after typing each word
+    }, 1000); // Delay before clearing the text
+  }
+}
+
+function clearText() {
+  typingTextElement.innerHTML = ""; // Clear the text
+  i = 0; // Reset the typing index
+  currentWord++; // Move to the next word
+  if (currentWord < words.length) {
+    setTimeout(typeWord, 500); // Delay before starting the next word
+  } else {
+    setTimeout(() => {
+      currentWord = 0; // Reset to the first word
+      typeWord(); // Restart typing
+    }, 2000); // Delay before restarting
+  }
+}
+
+typeWord(); // Start the typing animation
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+</body>
+
+</html>
