@@ -137,9 +137,11 @@ height: 160px;
 
 .horizontal-scroll-wrapper > div {
   flex-shrink: 0;
-  width: 260px;   /* Set width to 60px */
-  height: 270px;  /* Set height to 70px */
-  background: #cab;
+  width: 360px;   /* Set width to 60px */
+  height: 370px;  /* Set height to 70px */
+  
+flex-direction: column;
+justify-content: space-between; /* Give room for text and image */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -147,6 +149,9 @@ height: 160px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   border-radius: 10px;
+border: 1px solid white;
+  overflow: hidden; /* Ensure nothing overflows */
+margin-right: 5px;
 }
 
 .horizontal-scroll-wrapper > div:hover,
@@ -157,6 +162,18 @@ height: 160px;
 }
 
 
+.horizontal-scroll-wrapper img {
+  max-width: 90%;
+  /*max-height: 90%;*/
+  object-fit: contain;
+  margin-bottom: 2px;
+border-radius: 8px;
+}
+
+.horizontal-scroll-wrapper a{
+ color: white;
+ text-decoration: none;
+}
 
   </style>
 
@@ -436,42 +453,34 @@ At the age of 16 , Started building websites (using WordPress during covid-19 ) 
 
 
 
-<!--
 
 
 <div class="txt">
 <h3>💖 Some of my Projects<h3>
 <div class="horizontal-scroll-wrapper">
-  <div >Item 1</div>
-  <div >Item 2</div>
-  <div >Item 3</div>
-  <div >Item 4</div>
-  <div >Item 5</div>
-  <div >Item 6</div>
-  <div >Item 1</div>
-  <div >Item 2</div>
-  <div >Item 3</div>
-  <div >Item 4</div>
-  <div >Item 5</div>
-  <div >Item 6</div>
-  <div >Item 3</div>
-  <div >Item 4</div>
-  <div >Item 5</div>
-  <div >Item 6</div>
-  <div >Item 1</div>
-  <div >Item 2</div>
-  <div >Item 3</div>
-  <div >Item 4</div>
-  <div >Item 5</div>
-  <div >Item 6</div>
+ 
+  <div>
+    <a href="https://sonalisrisivani.github.io/photobooth/">Photobooth
+    <img src="img/1.png" alt="Photobooth Image"></a>
+  </div>
+  <div>
+    <a href="https://sonali-blog.web.app/"> Personal Blog  
+    <img src="img/2.png" alt="Personal Blog Image"></a>
+  </div>
+  <div>
+     <a href="https://sonalisrisivani.github.io/memory_card_matching_game/">Memory-card Matching Game
+    <img src="img/3.png" alt="Memory-card Matching Game Image"></a>
+  </div>
+  <div>
+    <a href="https://sonalisrisivani.github.io/merger_pdf/">Pdf Merger Tool
+    <img src="img/4.png" alt="Pdf Merger Tool Image"></a>
+  </div>
 
 </div>
-
 </div>
 
 
 
--->
 
 
 
