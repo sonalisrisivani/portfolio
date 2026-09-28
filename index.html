@@ -4,11 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sonali Sri Sivani</title>
-<script src="https://unpkg.com/scrollreveal"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
 
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>
-
- <style>
+  <style>
 
 @import url(https://fonts.googleapis.com/css?family=Amatic+SC);
 @import url(https://fonts.googleapis.com/css?family=Bungee);
@@ -17,131 +15,81 @@
       margin: 10px;
       padding: 10px;
       display: flex;
-      flex-direction: column; /* Stack elements vertically */
+      flex-direction: column;
       justify-content: center;
       align-items: center;
-     
-      
-      background: radial-gradient(ellipse, #e6ccb2 8%, #22577a 100%);  /*Optional: Set a background color */
-      /*overflow: hidden;*/
+      background: radial-gradient(ellipse, #e6ccb2 8%, #22577a 100%);
     }
 
-
-
-    /* Position the text at the top */
     .text-mask {
       position: absolute;
-      top: 20px; /* You can adjust this as needed */
+      top: 20px;
       left: 50%;
       transform: translateX(-50%);
-      font-family: 'Amatic SC',cursive;
-      font-size: 4rem; /* Adjust text size */
+      font-family: 'Amatic SC', cursive;
+      font-size: 4rem;
       font-weight: bold;
       color: transparent;
-      background-image: url("resources/text-background.gif"); /* Add background image */
+      background-image: url("resources/text-background.gif");
       background-size: cover;
-      background-clip: text; /* Make the background clip to the text */
+      background-clip: text;
       text-align: center;
     }
-
 
     .txt {
       margin: 20px;
       padding: 20px;
       color: white;
       font-size: 30px;
-	font-family: 'Amatic SC',cursive;
+      font-family: 'Amatic SC', cursive;
       text-align: left;
-      /*background: rgba(0, 0, 0, 0.7);*/
       border-radius: 10px;
       max-width: 100%;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
     }
 
-
-
-
-
-
-
-
-/* This is for cursor typing effect*/
+/* Cursor typing effect */
 .typing-effect {
   font-size: 40px;
-  font-family: 'Bungee',cursive;
+  font-family: 'Bungee', cursive;
   white-space: normal;
   overflow: hidden;
-  border-right: 3px solid white; /* Creates the cursor effect */
+  border-right: 3px solid white;
   height: 150px;
   width: 100%;
   display: inline;
   animation: blink 0.75s step-end infinite;
-} 
+}
 
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+  from { width: 0; }
+  to { width: 100%; }
 }
 
 @keyframes blink {
-  50% {
-    border-color: transparent;
-  }
+  50% { border-color: transparent; }
 }
 
-.type-height{
-
-height: 160px;
+.type-height {
+  height: 160px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* for projects section */
+/* Projects section */
 .horizontal-scroll-wrapper {
   display: flex;
   overflow-x: auto;
   padding: 20px 0;
   width: 100%;
-  max-height: $finalHeight;
   gap: 10px;
   scroll-behavior: smooth;
 }
 
 .horizontal-scroll-wrapper > div {
   flex-shrink: 0;
-  width: 360px;   /* Set width to 60px */
-  height: 370px;  /* Set height to 70px */
-  
-flex-direction: column;
-justify-content: space-between; /* Give room for text and image */
+  width: 360px;
+  height: 370px;
+  flex-direction: column;
+  justify-content: space-between;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -149,9 +97,9 @@ justify-content: space-between; /* Give room for text and image */
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
   border-radius: 10px;
-border: 1px solid white;
-  overflow: hidden; /* Ensure nothing overflows */
-margin-right: 5px;
+  border: 1px solid white;
+  overflow: hidden;
+  margin-right: 5px;
 }
 
 .horizontal-scroll-wrapper > div:hover,
@@ -161,109 +109,90 @@ margin-right: 5px;
   outline: none;
 }
 
-
 .horizontal-scroll-wrapper img {
   max-width: 90%;
-  /*max-height: 90%;*/
   object-fit: contain;
   margin-bottom: 2px;
-border-radius: 8px;
+  border-radius: 8px;
 }
 
-.horizontal-scroll-wrapper a{
- color: white;
- text-decoration: none;
+.horizontal-scroll-wrapper a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Timeline */
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+}
+
+.timeline-item {
+  position: relative;
+  padding: 2px;
+  margin: 10px 0;
+  background: lightpink;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  background: #e6ccb2;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+.timeline-content {
+  padding-left: 20px;
 }
 
   </style>
 
 </head>
 <body>
- 
-
-
-
- 
-
-
-<div class="txt"> <!-- this is to align all elements within it to left side of html body-->
 
 <div class="txt">
 
-<b>Sonali Sri Sivani</b> - <br> 
+<div class="txt">
+<b>Sonali Sri Sivani</b> - <br>
 <div class="type-height">
 <div class="typing-effect" id="typing-text"></div>
 </div>
 </div>
 
-
-
-
-
-
-
-
-
 <div class="txt">
 <b>About Me:</b>
 <br>
-Full Stack Developer <br>
-I like to give life to my thoughts by Art and Coding
-<br> and <br>
-Love watching anime, Drawing, Playing Chess
+Full Stack Developer who brings ideas to life through code and art.
+<br>
+I enjoy watching anime, drawing, and playing chess.
 </div>
-
-
-
-
-
-
-
-
-
-
 
 <div class="txt">
 <b>Motto:</b>
-A passionate developer who sees skills as a means to help others. My goal is to create meaningful tools and resources that positively impact lives, often as an unseen but valuable presence in people's everyday routines.
+I build meaningful tools and resources that positively impact people's lives — creating value through technology, one project at a time.
 </div>
-
-
-
-
-
-
-
-<!--
-<div class="txt">
-<b>Fun Fact(The Origin):</b>
-At the age of 16 , Started building websites (using WordPress during covid-19 ) cos i found it cool and then fell in love with its process and product. 
-</div>
--->
-
-
-
-
-
-
-
-
-
 
 <div class="txt">
 <b>My Skills:</b><br>
 <table>
   <tr>
     <td><b>Programming Languages</b></td>
-    <td>Java | C Programming | Python | C# </td>
+    <td>Java | C | Python | C#</td>
   </tr>
   <tr>
     <td><b>Web Development</b></td>
-    <td>HTML | CSS | JavaScript </td>
+    <td>HTML | CSS | JavaScript</td>
   </tr>
   <tr>
     <td><b>Frameworks & Libraries</b></td>
-    <td>Node.js | Flask | Spring Boot | React.js | 3.js | .NET | ASP | EF Core | MS Semantic Kernel | TensorFlow | Keras </td>
+    <td>Node.js | Flask | Spring Boot | React.js | Three.js | .NET | ASP.NET | EF Core | Semantic Kernel | TensorFlow | Keras</td>
   </tr>
   <tr>
     <td><b>Database</b></td>
@@ -275,232 +204,141 @@ At the age of 16 , Started building websites (using WordPress during covid-19 ) 
   </tr>
   <tr>
     <td><b>Design</b></td>
-    <td>Figma | Canva | WordPress | MS Word | Dora AI</td>
+    <td>Figma | Canva | WordPress</td>
   </tr>
   <tr>
     <td><b>AI & Automation</b></td>
-    <td>Google Colab | n8n | Hugging Face | Looker Studio | Power BI | MS Excel</td>
+    <td>Google Colab | n8n | Hugging Face | Looker Studio | Power BI</td>
   </tr>
   <tr>
-    <td><b>Version Control & IDE</b></td>
-    <td>GitHub | Visual Studio Code | BitBucket | Source Tree | Trae IDE | Cursor IDE </td>
+    <td><b>Version Control & Tools</b></td>
+    <td>Git | GitHub | Bitbucket | VS Code | Cursor IDE</td>
   </tr>
   <tr>
     <td><b>Operating Systems</b></td>
-    <td>Windows | Kali Linux | Linux</td>
+    <td>Windows | Linux | Kali Linux</td>
   </tr>
 </table>
 </div>
 
+<div class="txt">
+<b>Timeline:</b>
 
+  <div class="timeline">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>2018</h3>
+        <p>Selected for State Level "Under 17 Women's Chess" (SGF) and placed 3rd at District Level.</p>
+      </div>
+    </div>
 
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>2019</h3>
+        <p>Completed High School (SSC) at DAV Public School with CGPA 9.8.</p>
+      </div>
+    </div>
 
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>2020</h3>
+        <p>Built and hosted my first website using WordPress.</p>
+      </div>
+    </div>
 
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>2021</h3>
+        <p>Received NCC B Certificate with "A" Grade.</p>
+        <p>Completed Intermediate (MPC) at Sri Chaitanya with 93.1%.</p>
+      </div>
+    </div>
 
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>2022</h3>
+        <p>Memory Card Game — Built an interactive memory matching game using JavaScript.</p>
+        <p>PDF Merger Tool — Created a drag-and-drop tool for merging PDF files.</p>
+      </div>
+    </div>
 
-<!--
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>2023</h3>
+        <p>Job Search Portal — Integrated the Adzuna API to fetch real-time job listings with search and filter functionality.</p>
+        <p>Airline Management System — Developed a full stack flight booking system with a team of 5 using Flask and MongoDB.</p>
+        <p>Hosted a Competitive Programming workshop for 250+ participants with a team of 6.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>2024</h3>
+        <p>Restaurant Listing & Search API — Built a Node.js API with filtering and pagination.</p>
+        <p>GATE Qualified — Cleared GATE 2024 on the first attempt in the 3rd year of B.Tech.</p>
+        <p>Firebase Auth System — Implemented secure sign-in and sign-up flows using Firebase Authentication.</p>
+        <p>Personal Blog — Designed and deployed a food blog using Firebase.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h3>2025</h3>
+        <p>Java Backend Internship at Hulk Hire — Built an online payment gateway with Stripe integration using Spring Boot and Maven in an Agile Scrum environment.</p>
+        <p>Plant Disease Detection (Final Year Project) — Developed a Flask-based CNN model to detect diseases in cotton plants using TensorFlow and Keras.</p>
+        <p>Hackathon Achievement — Ranked in the top 1% globally in "The Frontend Hackathon" by Outlier; offered a freelance Reviewer role for Outlier's frontend projects.</p>
+        <p>Infosys .NET Training — Completed capstone projects in full stack development using C# .NET, EF Core, ASP.NET, and built AI agents with Microsoft Semantic Kernel.</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+</div>
 
 
 <div class="txt">
-<iframe src="timeline.html" width="100%" height="600px" style="border: none;"></iframe>
-</div>
-
-</div>
-
-
-
--->
-
-
-
-
-
-
-
-
 
 <div class="txt">
-<b>TimeLine: </b>
-
-   <div class="timeline">
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>2018</h3>
-                <p> Selected for State Level "Under 17 Women's Chess" SGF and Placed 3rd in District Level.</p>
-            </div>
-        </div>
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>2019</h3>
-                <p> Completed High School (SSC) at DAV PUBLIC School with CGPA 9.8.</p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>2020</h3>
-                <p>Built and Hosted 1st Website using Wordpress.</p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>2021</h3>
-		<p>Received NCC B Certificate with "A" Grade.</p>
-                <p>Completed Intermediate (MPC) at Sri Chaitanya with 93.1%</p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>2022</h3>
-                <p>Memory Card Game – Created a JavaScript-based interactive memory game.</p>
-                <p>PDF Merger Tool – Built a drag-and-drop tool for merging PDFs.</p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>2023</h3>
-                <p>Job Searching Web Portal – Integrated Adzuna API to fetch real-time job listings with search filters.</p>
-		<p>Full Stack Project: Airline Management System – Developed a flight booking system in a group of 5 ,using Flask and MongoDB.</p>
-		<p>Hosted a Workshop on Competetive Programming for 250+ members with a team of 6 members. </p>
-            </div>
-        </div>
-
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>2024</h3>
-                <p>Restaurant Listing & Searching – Developed a Node.js-based API with filtering and pagination features.</p>
-		<p>GATE Qualified - Qualified for GATE 2024 on the first attempt in the 3rd year of B.Tech. </p>
-                <p>Firebase User Authentication System – Implemented secure sign-in and sign-up using Firebase.</p>
-                <p>Personal Blog - Designed personal Food blog using firebase and hosted in firebase.</p>
-            </div>
-        </div>
-
-       
-        <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-content">
-                <h3>2025</h3>
-		<p> Java Backend Internship in Hulk Hire - Designed and Built Online Payment Gateway with Stripe Integration with Springboot and Maven in Agile Scrum Model.</p>
-                <p>Plant Disease Detection -(Final Year Project)-Developed a Flask-based CNN model to detect diseases in cotton plants using Python, TensorFlow, Keras, Flask, HTML, CSS, JavaScript.</p>
-		<p>Hackathon Achievement - Ranked in the top 1% of global submissions in “The Frontend Hackathon” by Outlier; offered a freelance opportunity as a “Reviewer” for Outlier’s Frontend Projects </p>
-		<p>Infosys Training on DOT Net- Trained and Worked on Capstone Projects on full stack development using C# .NET, EF Code and ASP , Semantic Kernel and Made Agents using Microsoft Semantic Kernel.</p>
-            </div>
-        </div>
-
-
-
-	   
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="txt"> <!-- this is to align all elements within it to left side of html body-->
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="txt">
-<h3>💖 Some of my Projects<h3>
+<h3>💖 Projects</h3>
 <div class="horizontal-scroll-wrapper">
 
   <div>
-    <a href="https://sonalisrisivani.github.io/ecommerce/public/">Photobooth
-    <img src="img/0.png" alt="Ecommerce Image"></a>
-  </div>	
+    <a href="https://sonalisrisivani.github.io/ecommerce/public/">E-Commerce Store
+    <img src="img/0.png" alt="E-Commerce Store"></a>
+  </div>
   <div>
     <a href="https://sonalisrisivani.github.io/photobooth/">Photobooth
-    <img src="img/1.png" alt="Photobooth Image"></a>
+    <img src="img/1.png" alt="Photobooth"></a>
   </div>
   <div>
-    <a href="https://sonali-blog.web.app/"> Personal Blog  
-    <img src="img/2.png" alt="Personal Blog Image"></a>
+    <a href="https://sonali-blog.web.app/">Personal Blog
+    <img src="img/2.png" alt="Personal Blog"></a>
   </div>
   <div>
-     <a href="https://sonalisrisivani.github.io/memory_card_matching_game/">Memory-card Matching Game
-    <img src="img/3.png" alt="Memory-card Matching Game Image"></a>
+    <a href="https://sonalisrisivani.github.io/memory_card_matching_game/">Memory Card Game
+    <img src="img/3.png" alt="Memory Card Game"></a>
   </div>
   <div>
-    <a href="https://sonalisrisivani.github.io/merger_pdf/">Pdf Merger Tool
-    <img src="img/4.png" alt="Pdf Merger Tool Image"></a>
+    <a href="https://sonalisrisivani.github.io/merger_pdf/">PDF Merger Tool
+    <img src="img/4.png" alt="PDF Merger Tool"></a>
   </div>
 
 </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <div class="txt">
-<h3>💖 Support My Projects<h3>
-If you like my work and want to support me, consider sponsoring me! Your support helps me to keep creating and maintaining amazing projects.  
+<h3>💖 Support My Projects</h3>
+If you like my work and want to support me, consider sponsoring me! Your support helps me keep creating and maintaining projects.
 
 <div align="center">
   <a href="https://github.com/sponsors/sonalisrisivani/dashboard">
@@ -509,17 +347,6 @@ If you like my work and want to support me, consider sponsoring me! Your support
 </div>
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
 
 <div class="txt">
 <h3>🔗 Connect with me:</h3>
@@ -532,46 +359,16 @@ If you like my work and want to support me, consider sponsoring me! Your support
     <img src="https://img.shields.io/badge/LinkedIn-Connect%20with%20me-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn Badge">
   </a>
   <a href="https://github.com/sonalisrisivani" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-Sonali_21-black?style=for-the-badge&logo=github" alt="GitHub Badge">
+    <img src="https://img.shields.io/badge/GitHub-sonalisrisivani-black?style=for-the-badge&logo=github" alt="GitHub Badge">
   </a>
-
 </p>
 
-
-
 </div>
-
-
 
 </div>
 <br><br>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <script>
-   
-
-
-
 
 const words = ["A Frontend Developer", "A Backend Developer", "A Full Stack Developer", "A Product Designer"];
 let i = 0;
@@ -582,125 +379,43 @@ function typeWord() {
   if (i < words[currentWord].length) {
     typingTextElement.innerHTML += words[currentWord].charAt(i);
     i++;
-    setTimeout(typeWord, 100); // Adjust the typing speed here
+    setTimeout(typeWord, 100);
   } else {
     setTimeout(() => {
-      clearText(); // Clear the text after typing each word
-    }, 1000); // Delay before clearing the text
+      clearText();
+    }, 1000);
   }
 }
 
 function clearText() {
-  typingTextElement.innerHTML = ""; // Clear the text
-  i = 0; // Reset the typing index
-  currentWord++; // Move to the next word
+  typingTextElement.innerHTML = "";
+  i = 0;
+  currentWord++;
   if (currentWord < words.length) {
-    setTimeout(typeWord, 500); // Delay before starting the next word
+    setTimeout(typeWord, 500);
   } else {
     setTimeout(() => {
-      currentWord = 0; // Reset to the first word
-      typeWord(); // Restart typing
-    }, 2000); // Delay before restarting
+      currentWord = 0;
+      typeWord();
+    }, 2000);
   }
 }
 
-typeWord(); // Start the typing animation
+typeWord();
 
+</script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  </script>
-
-
-
-    <script>
-        ScrollReveal().reveal('.timeline-item', {
-            duration: 1000,
-            origin: 'bottom',
-            distance: '50px',
-            easing: 'ease-in-out',
-            delay: 300,
-            interval: 200,
-	reset: true
-        });
-    </script>
-
-
-
+<script>
+  ScrollReveal().reveal('.timeline-item', {
+    duration: 1000,
+    origin: 'bottom',
+    distance: '50px',
+    easing: 'ease-in-out',
+    delay: 300,
+    interval: 200,
+    reset: true
+  });
+</script>
 
 </body>
-
 </html>
-
- <style>
-
-
-        .timeline {
-            position: relative;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .timeline-item {
-            position: relative;
-            padding: 2px;
-            margin: 10px 0;
-            background: light-pink ;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .timeline-dot {
-            position: absolute;
-            left: -15px;
-            top: 50%;
-            width: 15px;
-            height: 15px;
-            background: #e6ccb2;
-            border-radius: 50%;
-            transform: translateY(-50%);
-        }
-
-        .timeline-content {
-            padding-left: 20px;
-        }
-    </style>
-
-
-
