@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sonali Sri Sivani</title>
+  <title>Sonali Sri Sivani | Full Stack Developer</title>
   <script src="https://unpkg.com/scrollreveal"></script>
 
   <style>
-
-@import url(https://fonts.googleapis.com/css?family=Amatic+SC);
-@import url(https://fonts.googleapis.com/css?family=Bungee);
+    @import url(https://fonts.googleapis.com/css?family=Amatic+SC);
+    @import url(https://fonts.googleapis.com/css?family=Bungee);
 
     body {
       margin: 10px;
@@ -19,403 +18,332 @@
       justify-content: center;
       align-items: center;
       background: radial-gradient(ellipse, #e6ccb2 8%, #22577a 100%);
-    }
-
-    .text-mask {
-      position: absolute;
-      top: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      font-family: 'Amatic SC', cursive;
-      font-size: 4rem;
-      font-weight: bold;
-      color: transparent;
-      background-image: url("resources/text-background.gif");
-      background-size: cover;
-      background-clip: text;
-      text-align: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
     .txt {
-      margin: 20px;
-      padding: 20px;
+      margin: 15px auto;
+      padding: 24px;
       color: white;
-      font-size: 30px;
+      font-size: 24px;
       font-family: 'Amatic SC', cursive;
       text-align: left;
       border-radius: 10px;
-      max-width: 100%;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      max-width: 900px;
+      box-sizing: border-box;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
     }
 
-/* Cursor typing effect */
-.typing-effect {
-  font-size: 40px;
-  font-family: 'Bungee', cursive;
-  white-space: normal;
-  overflow: hidden;
-  border-right: 3px solid white;
-  height: 150px;
-  width: 100%;
-  display: inline;
-  animation: blink 0.75s step-end infinite;
-}
+    .heading-title {
+      font-size: 42px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
 
-@keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
-}
+    .bio-text {
+      font-size: 26px;
+      line-height: 1.4;
+    }
 
-@keyframes blink {
-  50% { border-color: transparent; }
-}
+    /* Typing effect */
+    .type-height {
+      height: 70px;
+      margin-top: 5px;
+    }
 
-.type-height {
-  height: 160px;
-}
+    .typing-effect {
+      font-size: 32px;
+      font-family: 'Bungee', cursive;
+      border-right: 3px solid white;
+      white-space: nowrap;
+      overflow: hidden;
+      display: inline-block;
+      animation: blink 0.75s step-end infinite;
+    }
 
-/* Projects section */
-.horizontal-scroll-wrapper {
-  display: flex;
-  overflow-x: auto;
-  padding: 20px 0;
-  width: 100%;
-  gap: 10px;
-  scroll-behavior: smooth;
-}
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
 
-.horizontal-scroll-wrapper > div {
-  flex-shrink: 0;
-  width: 360px;
-  height: 370px;
-  flex-direction: column;
-  justify-content: space-between;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  border-radius: 10px;
-  border: 1px solid white;
-  overflow: hidden;
-  margin-right: 5px;
-}
+    /* Skills Table */
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 22px;
+      margin-top: 10px;
+    }
 
-.horizontal-scroll-wrapper > div:hover,
-.horizontal-scroll-wrapper > div:focus {
-  transform: scale(1.1);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  outline: none;
-}
+    .skills-table td {
+      padding: 8px 12px;
+      vertical-align: top;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    }
 
-.horizontal-scroll-wrapper img {
-  max-width: 90%;
-  object-fit: contain;
-  margin-bottom: 2px;
-  border-radius: 8px;
-}
+    .skills-table td:first-child {
+      width: 30%;
+      font-weight: bold;
+      color: #ffe5d9;
+    }
 
-.horizontal-scroll-wrapper a {
-  color: white;
-  text-decoration: none;
-}
+    /* Projects section */
+    .horizontal-scroll-wrapper {
+      display: flex;
+      overflow-x: auto;
+      padding: 15px 0;
+      width: 100%;
+      gap: 15px;
+      scroll-behavior: smooth;
+    }
 
-/* Timeline */
-.timeline {
-  position: relative;
-  max-width: 900px;
-  margin: auto;
-}
+    .horizontal-scroll-wrapper > div {
+      flex-shrink: 0;
+      width: 320px;
+      height: 330px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      background: rgba(0, 0, 0, 0.2);
+      overflow: hidden;
+      padding: 12px;
+      box-sizing: border-box;
+    }
 
-.timeline-item {
-  position: relative;
-  padding: 2px;
-  margin: 10px 0;
-  background: lightpink;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+    .horizontal-scroll-wrapper > div:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
 
-.timeline-dot {
-  position: absolute;
-  left: -15px;
-  top: 50%;
-  width: 15px;
-  height: 15px;
-  background: #e6ccb2;
-  border-radius: 50%;
-  transform: translateY(-50%);
-}
+    .horizontal-scroll-wrapper img {
+      max-width: 100%;
+      max-height: 220px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
 
-.timeline-content {
-  padding-left: 20px;
-}
+    .horizontal-scroll-wrapper a {
+      color: white;
+      text-decoration: none;
+      font-size: 26px;
+      font-weight: bold;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-between;
+    }
 
+    /* Timeline */
+    .timeline {
+      position: relative;
+      width: 100%;
+      margin: 15px auto;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 14px 18px;
+      margin: 12px 0;
+      background: rgba(255, 255, 255, 0.12);
+      border-left: 4px solid #e6ccb2;
+      border-radius: 6px;
+      backdrop-filter: blur(4px);
+    }
+
+    .timeline-item h3 {
+      margin: 0 0 6px 0;
+      font-size: 26px;
+      color: #ffe5d9;
+    }
+
+    .timeline-item p {
+      margin: 4px 0;
+      font-size: 22px;
+      line-height: 1.3;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+      margin-top: 10px;
+    }
   </style>
-
 </head>
 <body>
 
-<div class="txt">
+  <!-- Header & Intro -->
+  <div class="txt">
+    <div class="heading-title">Sonali Sri Sivani</div>
+    <div class="type-height">
+      <div class="typing-effect" id="typing-text"></div>
+    </div>
+  </div>
 
-<div class="txt">
-<b>Sonali Sri Sivani</b> - <br>
-<div class="type-height">
-<div class="typing-effect" id="typing-text"></div>
-</div>
-</div>
+  <!-- About -->
+  <div class="txt">
+    <div class="heading-title">About</div>
+    <div class="bio-text">
+      Full Stack Software Engineer focused on building scalable web services, backend APIs, and AI-powered applications. Experienced in Java Spring Boot, C# .NET, React, and cloud architectures.
+    </div>
+  </div>
 
-<div class="txt">
-<b>About Me:</b>
-<br>
-Full Stack Developer who brings ideas to life through code and art.
-<br>
-I enjoy watching anime, drawing, and playing chess.
-</div>
+  <!-- Technical Skills -->
+  <div class="txt">
+    <div class="heading-title">Technical Skills</div>
+    <table class="skills-table">
+      <tr>
+        <td>Languages</td>
+        <td>Java, C#, Python, JavaScript, TypeScript, C, SQL</td>
+      </tr>
+      <tr>
+        <td>Backend & Frameworks</td>
+        <td>Spring Boot, ASP.NET Core, Node.js, Express, Flask, EF Core, REST APIs</td>
+      </tr>
+      <tr>
+        <td>Frontend</td>
+        <td>React.js, Three.js, HTML5, CSS3, JavaScript (ES6+)</td>
+      </tr>
+      <tr>
+        <td>AI & Machine Learning</td>
+        <td>Microsoft Semantic Kernel, TensorFlow, Keras, Hugging Face</td>
+      </tr>
+      <tr>
+        <td>Databases & Cloud</td>
+        <td>MySQL, MongoDB, Firebase (Firestore & Realtime), Azure</td>
+      </tr>
+      <tr>
+        <td>Tools & Workflows</td>
+        <td>Git, GitHub, Bitbucket, Postman, CI/CD, Agile/Scrum</td>
+      </tr>
+    </table>
+  </div>
 
-<div class="txt">
-<b>Motto:</b>
-I build meaningful tools and resources that positively impact people's lives — creating value through technology, one project at a time.
-</div>
-
-<div class="txt">
-<b>My Skills:</b><br>
-<table>
-  <tr>
-    <td><b>Programming Languages</b></td>
-    <td>Java | C | Python | C#</td>
-  </tr>
-  <tr>
-    <td><b>Web Development</b></td>
-    <td>HTML | CSS | JavaScript</td>
-  </tr>
-  <tr>
-    <td><b>Frameworks & Libraries</b></td>
-    <td>Node.js | Flask | Spring Boot | React.js | Three.js | .NET | ASP.NET | EF Core | Semantic Kernel | TensorFlow | Keras</td>
-  </tr>
-  <tr>
-    <td><b>Database</b></td>
-    <td>MySQL | MongoDB | Firestore | Firebase Realtime Database</td>
-  </tr>
-  <tr>
-    <td><b>Cloud</b></td>
-    <td>Firebase | Azure</td>
-  </tr>
-  <tr>
-    <td><b>Design</b></td>
-    <td>Figma | Canva | WordPress</td>
-  </tr>
-  <tr>
-    <td><b>AI & Automation</b></td>
-    <td>Google Colab | n8n | Hugging Face | Looker Studio | Power BI</td>
-  </tr>
-  <tr>
-    <td><b>Version Control & Tools</b></td>
-    <td>Git | GitHub | Bitbucket | VS Code | Cursor IDE</td>
-  </tr>
-  <tr>
-    <td><b>Operating Systems</b></td>
-    <td>Windows | Linux | Kali Linux</td>
-  </tr>
-</table>
-</div>
-
-<div class="txt">
-<b>Timeline:</b>
-
-  <div class="timeline">
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>2018</h3>
-        <p>Selected for State Level "Under 17 Women's Chess" (SGF) and placed 3rd at District Level.</p>
+  <!-- Featured Projects -->
+  <div class="txt">
+    <div class="heading-title">Featured Projects</div>
+    <div class="horizontal-scroll-wrapper">
+      <div>
+        <a href="https://sonalisrisivani.github.io/ecommerce/public/" target="_blank">
+          <span>E-Commerce Platform</span>
+          <img src="img/0.png" alt="E-Commerce Store">
+        </a>
+      </div>
+      <div>
+        <a href="https://sonalisrisivani.github.io/photobooth/" target="_blank">
+          <span>Photobooth Web App</span>
+          <img src="img/1.png" alt="Photobooth">
+        </a>
+      </div>
+      <div>
+        <a href="https://sonali-blog.web.app/" target="_blank">
+          <span>Full Stack Blog Platform</span>
+          <img src="img/2.png" alt="Personal Blog">
+        </a>
+      </div>
+      <div>
+        <a href="https://sonalisrisivani.github.io/memory_card_matching_game/" target="_blank">
+          <span>Interactive Memory Game</span>
+          <img src="img/3.png" alt="Memory Card Game">
+        </a>
+      </div>
+      <div>
+        <a href="https://sonalisrisivani.github.io/merger_pdf/" target="_blank">
+          <span>PDF Manipulation Tool</span>
+          <img src="img/4.png" alt="PDF Merger Tool">
+        </a>
       </div>
     </div>
+  </div>
 
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>2019</h3>
-        <p>Completed High School (SSC) at DAV Public School with CGPA 9.8.</p>
-      </div>
-    </div>
+  <!-- Experience & Milestones -->
+  <div class="txt">
+    <div class="heading-title">Experience & Milestones</div>
+    <div class="timeline">
 
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>2020</h3>
-        <p>Built and hosted my first website using WordPress.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>2021</h3>
-        <p>Received NCC B Certificate with "A" Grade.</p>
-        <p>Completed Intermediate (MPC) at Sri Chaitanya with 93.1%.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>2022</h3>
-        <p>Memory Card Game — Built an interactive memory matching game using JavaScript.</p>
-        <p>PDF Merger Tool — Created a drag-and-drop tool for merging PDF files.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>2023</h3>
-        <p>Job Search Portal — Integrated the Adzuna API to fetch real-time job listings with search and filter functionality.</p>
-        <p>Airline Management System — Developed a full stack flight booking system with a team of 5 using Flask and MongoDB.</p>
-        <p>Hosted a Competitive Programming workshop for 250+ participants with a team of 6.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
-        <h3>2024</h3>
-        <p>Restaurant Listing & Search API — Built a Node.js API with filtering and pagination.</p>
-        <p>GATE Qualified — Cleared GATE 2024 on the first attempt in the 3rd year of B.Tech.</p>
-        <p>Firebase Auth System — Implemented secure sign-in and sign-up flows using Firebase Authentication.</p>
-        <p>Personal Blog — Designed and deployed a food blog using Firebase.</p>
-      </div>
-    </div>
-
-    <div class="timeline-item">
-      <div class="timeline-dot"></div>
-      <div class="timeline-content">
+      <div class="timeline-item">
         <h3>2025</h3>
-        <p>Java Backend Internship at Hulk Hire — Built an online payment gateway with Stripe integration using Spring Boot and Maven in an Agile Scrum environment.</p>
-        <p>Plant Disease Detection (Final Year Project) — Developed a Flask-based CNN model to detect diseases in cotton plants using TensorFlow and Keras.</p>
-        <p>Hackathon Achievement — Ranked in the top 1% globally in "The Frontend Hackathon" by Outlier; offered a freelance Reviewer role for Outlier's frontend projects.</p>
-        <p>Infosys .NET Training — Completed capstone projects in full stack development using C# .NET, EF Core, ASP.NET, and built AI agents with Microsoft Semantic Kernel.</p>
+        <p><b>Java Backend Intern — Hulk Hire:</b> Built microservices and integrated online payment gateways using Spring Boot, Stripe API, and Maven within an Agile Scrum team.</p>
+        <p><b>Infosys .NET Full Stack Training:</b> Completed capstone enterprise projects using C# .NET, ASP.NET Core, EF Core, and engineered intelligent agents with Microsoft Semantic Kernel.</p>
+        <p><b>Frontend Hackathon — Global Top 1%:</b> Ranked in the top 1% globally in Outlier's Frontend Hackathon; offered a reviewer role for frontend engineering projects.</p>
+        <p><b>Plant Disease Detection System:</b> Designed and deployed a CNN-based deep learning classification pipeline using TensorFlow, Keras, and Flask for agricultural diagnostics.</p>
       </div>
+
+      <div class="timeline-item">
+        <h3>2024</h3>
+        <p><b>GATE 2024 Qualified:</b> Successfully cleared the Graduate Aptitude Test in Engineering (Computer Science) in 3rd year of B.Tech.</p>
+        <p><b>Restaurant Discovery & Search API:</b> Developed a high-performance Node.js backend with advanced filtering, full-text search, and pagination.</p>
+        <p><b>Firebase Authentication & Cloud Platform:</b> Implemented OAuth and RBAC authentication flows integrated with Firestore backend services.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>2023</h3>
+        <p><b>Airline Reservation System:</b> Developed a full stack flight management and ticketing platform using Flask and MongoDB with a 5-member engineering team.</p>
+        <p><b>Job Search & Aggregation Portal:</b> Built a real-time job aggregation engine integrating the Adzuna API with custom query filters.</p>
+        <p><b>Competitive Programming Workshop:</b> Organized and mentored a technical workshop on algorithms and data structures for 250+ engineering students.</p>
+      </div>
+
     </div>
-
   </div>
 
-</div>
-
-</div>
-
-
-<div class="txt">
-
-<div class="txt">
-<h3>💖 Projects</h3>
-<div class="horizontal-scroll-wrapper">
-
-  <div>
-    <a href="https://sonalisrisivani.github.io/ecommerce/public/">E-Commerce Store
-    <img src="img/0.png" alt="E-Commerce Store"></a>
-  </div>
-  <div>
-    <a href="https://sonalisrisivani.github.io/photobooth/">Photobooth
-    <img src="img/1.png" alt="Photobooth"></a>
-  </div>
-  <div>
-    <a href="https://sonali-blog.web.app/">Personal Blog
-    <img src="img/2.png" alt="Personal Blog"></a>
-  </div>
-  <div>
-    <a href="https://sonalisrisivani.github.io/memory_card_matching_game/">Memory Card Game
-    <img src="img/3.png" alt="Memory Card Game"></a>
-  </div>
-  <div>
-    <a href="https://sonalisrisivani.github.io/merger_pdf/">PDF Merger Tool
-    <img src="img/4.png" alt="PDF Merger Tool"></a>
+  <!-- Connect -->
+  <div class="txt">
+    <div class="heading-title">Connect</div>
+    <div class="contact-links">
+      <a href="https://mail.google.com/mail/?view=cm&to=sonalisrisivani@gmail.com" target="_blank">
+        <img src="https://img.shields.io/badge/Email-sonalisrisivani@gmail.com-red?style=for-the-badge&logo=gmail" alt="Email">
+      </a>
+      <a href="https://www.linkedin.com/in/gsss/" target="_blank">
+        <img src="https://img.shields.io/badge/LinkedIn-Connect-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/sonalisrisivani" target="_blank">
+        <img src="https://img.shields.io/badge/GitHub-Profile-black?style=for-the-badge&logo=github" alt="GitHub">
+      </a>
+    </div>
   </div>
 
-</div>
-</div>
+  <script>
+    const roles = ["Full Stack Developer", "Backend Engineer", "AI & Cloud Enthusiast"];
+    let charIndex = 0;
+    let roleIndex = 0;
+    const typingElement = document.getElementById('typing-text');
 
-<div class="txt">
-<h3>💖 Support My Projects</h3>
-If you like my work and want to support me, consider sponsoring me! Your support helps me keep creating and maintaining projects.
+    function type() {
+      if (charIndex < roles[roleIndex].length) {
+        typingElement.textContent += roles[roleIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 80);
+      } else {
+        setTimeout(erase, 1500);
+      }
+    }
 
-<div align="center">
-  <a href="https://github.com/sponsors/sonalisrisivani/dashboard">
-    <img src="https://img.shields.io/badge/Sponsor%20Me-✨-blueviolet?style=for-the-badge&logo=github-sponsors" alt="Sponsor Me">
-  </a>
-</div>
+    function erase() {
+      if (charIndex > 0) {
+        typingElement.textContent = roles[roleIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, 40);
+      } else {
+        roleIndex = (roleIndex + 1) % roles.length;
+        setTimeout(type, 300);
+      }
+    }
 
-</div>
+    type();
 
-<div class="txt">
-<h3>🔗 Connect with me:</h3>
-
-<p>
-  <a href="https://mail.google.com/mail/?view=cm&to=sonalisrisivani@gmail.com" target="_blank">
-    <img src="https://img.shields.io/badge/Gmail-sonalisrisivani@gmail.com-red?style=for-the-badge&logo=gmail" alt="Gmail Badge">
-  </a>
-  <a href="https://www.linkedin.com/in/gsss/" target="_blank">
-    <img src="https://img.shields.io/badge/LinkedIn-Connect%20with%20me-blue?style=for-the-badge&logo=linkedin" alt="LinkedIn Badge">
-  </a>
-  <a href="https://github.com/sonalisrisivani" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-sonalisrisivani-black?style=for-the-badge&logo=github" alt="GitHub Badge">
-  </a>
-</p>
-
-</div>
-
-</div>
-<br><br>
-
-<script>
-
-const words = ["A Frontend Developer", "A Backend Developer", "A Full Stack Developer", "A Product Designer"];
-let i = 0;
-let currentWord = 0;
-const typingTextElement = document.getElementById('typing-text');
-
-function typeWord() {
-  if (i < words[currentWord].length) {
-    typingTextElement.innerHTML += words[currentWord].charAt(i);
-    i++;
-    setTimeout(typeWord, 100);
-  } else {
-    setTimeout(() => {
-      clearText();
-    }, 1000);
-  }
-}
-
-function clearText() {
-  typingTextElement.innerHTML = "";
-  i = 0;
-  currentWord++;
-  if (currentWord < words.length) {
-    setTimeout(typeWord, 500);
-  } else {
-    setTimeout(() => {
-      currentWord = 0;
-      typeWord();
-    }, 2000);
-  }
-}
-
-typeWord();
-
-</script>
-
-<script>
-  ScrollReveal().reveal('.timeline-item', {
-    duration: 1000,
-    origin: 'bottom',
-    distance: '50px',
-    easing: 'ease-in-out',
-    delay: 300,
-    interval: 200,
-    reset: true
-  });
-</script>
-
+    ScrollReveal().reveal('.timeline-item', {
+      duration: 800,
+      origin: 'bottom',
+      distance: '30px',
+      easing: 'ease-in-out',
+      interval: 150,
+      reset: true
+    });
+  </script>
 </body>
 </html>
